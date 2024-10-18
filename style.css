@@ -144,7 +144,7 @@ body {
    #desc{
        /* border: 2px solid #ef476f; */
        font-size: medium;
-       height: 150px;
+       height: 199px;
        overflow-y: scroll;
        -ms-overflow-style: none;  /* IE and Edge */
        scrollbar-width: none; 
