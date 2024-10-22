@@ -133,6 +133,7 @@ body {
     left: 0;
     top: 0;
     box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
    }
    
    p {
@@ -159,7 +160,7 @@ body {
     left: 125px;
     /* top: 200px; */
     color: #333;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     width: 95px;
    }
    
@@ -172,28 +173,30 @@ body {
     outline-style: dashed;
    }
    
-   .birthdayCard:hover {
+   .active {
     transform: perspective(2500px) rotate(5deg);
     box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .2), 0 10px 100px rgba(0, 0, 0, 0.5);
    }
+   .active .cardFront {
+    transform: rotateY(-160deg);
+   }
    
-   .birthdayCard:hover .cardFront {
+   .active .happy {
+    visibility: hidden;
+   }
+
+   /* .birthdayCard:hover {
+    transform: perspective(2500px) rotate(5deg);
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .2), 0 10px 100px rgba(0, 0, 0, 0.5);
+   } */
+   
+   /* .birthdayCard:hover .cardFront {
     transform: rotateY(-160deg);
    }
    
    .birthdayCard:hover .happy {
     visibility: hidden;
-   }
-   .birthdayCard .video{
-    visibility: hidden;
-    position: relative;
-    top: -82px;
-    width: 250px;
-    transform: rotateY(180deg) scale(1.27); /* Combine both rotateY and scale */
-   }
-   .birthdayCard:hover .video{
-    visibility: visible;
-   }
+   } */
    
    @keyframes blink {
     0% {
@@ -229,4 +232,46 @@ body {
    footer a{
     color: white;
    }
-   
+   /* Ensure the video covers the entire background */
+   .background-video-container {
+    /* position: relative; */
+    overflow: hidden;
+    width: 100%;
+    height: 350px;
+    /* overflow: hidden; */
+}
+  
+#backgroundVideo {
+    /* position: absolute; */
+    top: 43%;
+    left: 50%;
+    /* z-index: -1; */
+    /* transform: translate(-50%, -50%); */
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+.only-text{
+    /* position: absolute; */
+    height: 100%;
+  }
+
+  .flicker-btn {
+    background-color: #8e44ad;
+    margin-left: 14px;
+    color: white;
+    padding: 5px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    position: relative;
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
