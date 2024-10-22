@@ -184,6 +184,16 @@ body {
    .birthdayCard:hover .happy {
     visibility: hidden;
    }
+   .birthdayCard .video{
+    visibility: hidden;
+    position: relative;
+    top: -82px;
+    width: 250px;
+    transform: rotateY(180deg) scale(1.27); /* Combine both rotateY and scale */
+   }
+   .birthdayCard:hover .video{
+    visibility: visible;
+   }
    
    @keyframes blink {
     0% {
