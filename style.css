@@ -137,7 +137,7 @@ body {
    }
    
    p {
-    font-family: MV Boli;
+    font-family: MV Boli , sans-serif;
     margin: 12px 8px 8px 18px;
     color: #000;
    }
@@ -274,4 +274,8 @@ body {
     50% { opacity: 0.5; }
     100% { opacity: 1; }
 }
-
+@font-face {
+    font-family: 'MV Boli';
+    src: url('path-to-your-font/MVBoli.woff2') format('woff2'),
+         url('path-to-your-font/MVBoli.woff') format('woff');
+}
